@@ -218,10 +218,20 @@ h1, h2, h3, h4 {
   color: var(--c-white);
   font-size: var(--t-xs);
   padding: 6px var(--s-4);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .btn-buy-nav:hover {
   background-color: var(--c-accent-h);
+}
+
+.btn-buy-nav .btn-icon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 /* Botón submit formulario */
@@ -272,9 +282,16 @@ h1, h2, h3, h4 {
   align-items: center;
   justify-content: space-between;
   gap: var(--s-8);
+  position: relative;
 }
 
 /* Logo */
+.nav-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .nav-logo a {
   font-size: var(--t-lg);
   font-weight: 800;
@@ -311,6 +328,8 @@ h1, h2, h3, h4 {
   cursor: pointer;
   background: none;
   border: none;
+  position: relative;
+  z-index: 101;
 }
 
 .nav-toggle span {
@@ -329,6 +348,11 @@ h1, h2, h3, h4 {
 }
 .nav-toggle.active span:nth-child(3) {
   transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Ocultar botón de compra en nav en móvil */
+.nav-cta {
+  display: none;
 }
 
 /* Menú móvil desplegable (JS lo muestra) */
@@ -361,6 +385,59 @@ h1, h2, h3, h4 {
   padding-block: var(--s-4);
   border-bottom: 1px solid rgba(255,255,255,0.06);
   letter-spacing: -0.02em;
+}
+
+/* Botón flotante de compra (móvil) */
+.floating-buy-btn {
+  position: fixed;
+  bottom: var(--s-6);
+  right: var(--s-6);
+  z-index: 100;
+  background-color: var(--c-accent);
+  color: var(--c-white);
+  width: 64px;
+  height: 64px;
+  border-radius: var(--r-full);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  box-shadow: 0 8px 24px rgba(0,113,227,0.4);
+  transition: transform var(--tr-fast), box-shadow var(--tr-fast);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.floating-buy-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 32px rgba(0,113,227,0.5);
+}
+
+.floating-buy-btn:active {
+  transform: scale(0.95);
+}
+
+.floating-buy-btn .icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floating-buy-btn .icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.floating-buy-btn .text {
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 /* ────────────────────────────────────────────────────────────
@@ -904,8 +981,7 @@ h1, h2, h3, h4 {
   width: 18px;
   height: 18px;
   object-fit: contain;
-  opacity: 0.5;
-  filter: invert(1);
+  opacity: 0.8;
   transition: opacity var(--tr-fast);
 }
 
@@ -952,6 +1028,19 @@ h1, h2, h3, h4 {
 @media (min-width: 768px) {
   /* Mostrar menú nav y ocultar hamburger */
   .nav-menu { display: flex; }
+  .nav-toggle { display: none !important; }
+  
+  /* Mostrar botón de compra en nav */
+  .nav-cta { display: block; }
+  
+  /* Ocultar botón flotante en escritorio */
+  .floating-buy-btn { display: none; }
+  
+  /* Logo vuelve a su posición normal */
+  .nav-logo {
+    position: static;
+    transform: none;
+  }
 
   /* Footer en columnas */
   .footer-container {
