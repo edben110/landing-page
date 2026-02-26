@@ -961,6 +961,93 @@ h1, h2, h3, h4 {
   gap: var(--s-16);
 }
 
+/* Perfil personal centrado */
+.resume-profile {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-4);
+  padding: var(--s-8);
+  background: linear-gradient(135deg, rgba(0,113,227,0.05) 0%, rgba(0,113,227,0.02) 100%);
+  border-radius: var(--r-xl);
+  border: 1px solid rgba(0,113,227,0.1);
+}
+
+.profile-avatar {
+  margin-bottom: var(--s-2);
+}
+
+.avatar-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--r-full);
+  background: linear-gradient(135deg, var(--c-accent) 0%, #0077ed 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--t-3xl);
+  font-weight: 700;
+  color: var(--c-white);
+  box-shadow: 0 8px 24px rgba(0,113,227,0.3);
+  border: 4px solid var(--c-surface);
+}
+
+.profile-name {
+  font-size: var(--t-2xl);
+  font-weight: 700;
+  color: var(--c-text);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.profile-title {
+  font-size: var(--t-base);
+  color: var(--c-text-mid);
+  font-weight: 500;
+  margin: 0;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  margin-top: var(--s-2);
+  width: 100%;
+}
+
+.profile-info-item {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  font-size: var(--t-sm);
+  color: var(--c-text-mid);
+  justify-content: center;
+}
+
+.profile-info-item svg {
+  flex-shrink: 0;
+  color: var(--c-accent);
+}
+
+@media (min-width: 600px) {
+  .profile-info {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .profile-info-item {
+    padding: 0 var(--s-4);
+    border-right: 1px solid var(--c-border);
+  }
+  
+  .profile-info-item:last-child {
+    border-right: none;
+  }
+}
+
 .resume-content {
   width: 100%;
   display: grid;
@@ -980,6 +1067,10 @@ h1, h2, h3, h4 {
 .resume-card:hover {
   box-shadow: var(--sh-md);
   transform: translateY(-3px);
+}
+
+.resume-card-full {
+  grid-column: 1 / -1;
 }
 
 .resume-card-title {
@@ -1041,6 +1132,39 @@ h1, h2, h3, h4 {
   font-style: italic;
 }
 
+/* Sección de intereses */
+.interests-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.interest-item {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  padding: var(--s-3);
+  background-color: var(--c-bg);
+  border-radius: var(--r-md);
+  transition: transform var(--tr-fast), background-color var(--tr-fast);
+}
+
+.interest-item:hover {
+  transform: translateX(4px);
+  background-color: rgba(0,113,227,0.08);
+}
+
+.interest-icon {
+  font-size: var(--t-xl);
+  flex-shrink: 0;
+}
+
+.interest-text {
+  font-size: var(--t-base);
+  color: var(--c-text);
+  font-weight: 500;
+}
+
 .resume-repos {
   display: flex;
   flex-direction: column;
@@ -1073,6 +1197,69 @@ h1, h2, h3, h4 {
   flex-shrink: 0;
 }
 
+/* Sección de habilidades técnicas */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--s-4);
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-3);
+  padding: var(--s-5);
+  background-color: var(--c-bg);
+  border-radius: var(--r-md);
+  transition: transform var(--tr-fast), 
+              background-color var(--tr-fast),
+              box-shadow var(--tr-fast);
+  cursor: default;
+}
+
+.skill-item:hover {
+  transform: translateY(-4px);
+  background-color: var(--c-accent);
+  box-shadow: var(--sh-sm);
+}
+
+.skill-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  transition: transform var(--tr-fast);
+}
+
+.skill-item:hover .skill-icon {
+  transform: scale(1.1);
+}
+
+.skill-name {
+  font-size: var(--t-sm);
+  font-weight: 600;
+  color: var(--c-text);
+  text-align: center;
+  transition: color var(--tr-fast);
+}
+
+.skill-item:hover .skill-name {
+  color: var(--c-white);
+}
+
+/* Responsive para habilidades */
+@media (min-width: 600px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
 /* Responsive para hoja de vida */
 @media (min-width: 768px) {
   .resume-content {
@@ -1080,6 +1267,10 @@ h1, h2, h3, h4 {
   }
   
   .resume-card:first-child {
+    grid-column: 1 / -1;
+  }
+  
+  .resume-card-full {
     grid-column: 1 / -1;
   }
 }
@@ -1091,6 +1282,10 @@ h1, h2, h3, h4 {
   
   .resume-card:first-child {
     grid-column: auto;
+  }
+  
+  .resume-card-full {
+    grid-column: 1 / -1;
   }
 }
 
