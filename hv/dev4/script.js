@@ -909,3 +909,50 @@ class FocusManager {
 document.addEventListener('DOMContentLoaded', () => {
     new FocusManager();
 });
+
+// ========================================
+// RIPPLE EFFECT ON CLICK
+// ========================================
+/**
+ * Crea un elemento ripple en la posición del click.
+ * Reutilizable: un solo listener delegado en el document.
+ */
+function createRipple(e) {
+    const target = e.currentTarget;
+    const rect   = target.getBoundingClientRect();
+
+    const x    = e.clientX - rect.left;
+    const y    = e.clientY - rect.top;
+    const size = Math.max(rect.width, rect.height) * 2;
+
+    const ripple = document.createElement('span');
+    ripple.className = 'ripple-element';
+    ripple.style.cssText = `
+        width:  ${size}px;
+        height: ${size}px;
+        left:   ${x - size / 2}px;
+        top:    ${y - size / 2}px;
+    `;
+
+    target.appendChild(ripple);
+
+    ripple.addEventListener('animationend', () => ripple.remove());
+}
+
+// Selectores de todos los elementos que deben tener efecto ripple
+const RIPPLE_SELECTOR = [
+    '.btn',
+    '.skill-card',
+    '.carousel-button',
+    '.tag',
+    '.hv-card',
+    '.hv-repo-link',
+    '.portfolio-card',
+    '.timeline-content'
+].join(', ');
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll(RIPPLE_SELECTOR).forEach(el => {
+        el.addEventListener('click', createRipple);
+    });
+});
