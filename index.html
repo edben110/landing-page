@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NexPhone X1 - El smartphone del futuro con tecnología innovadora y diseño elegante">
+    <meta name="description" content="NexPhone X1 - El smartphone del futuro con tecnolog├¡a innovadora y dise├▒o elegante">
     <title>NexPhone X1 - El futuro en tus manos</title>
     
     <!-- Enlace a hoja de estilos principal -->
@@ -11,7 +11,7 @@
 </head>
 <body>
     
-    <!-- HEADER: Barra de navegación principal -->
+    <!-- HEADER: Barra de navegaci├│n principal -->
     <header class="main-header">
         <nav class="main-nav">
             <div class="nav-container">
@@ -20,15 +20,33 @@
                     <a href="#home">NexPhone</a>
                 </div>
                 
-                <!-- Menú de navegación -->
+                <!-- Men├║ de navegaci├│n -->
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="#benefits" class="nav-link">Beneficios</a></li>
-                    <li class="nav-item"><a href="#features" class="nav-link">Características</a></li>
+                    <li class="nav-item"><a href="#features" class="nav-link">Caracter├¡sticas</a></li>
                     <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonios</a></li>
                     <li class="nav-item"><a href="#contact" class="nav-link">Contacto</a></li>
-                </ul>
+                                <!-- Botón de cambio de tema -->
+                <button class="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema">
+                    <svg class="theme-icon sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="theme-icon moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
                 
-                <!-- Botón de compra en navegación -->
+</ul>
+                
+                <!-- Bot├│n de compra en navegaci├│n -->
                 <div class="nav-cta">
                     <a href="#buy" class="btn-buy-nav">
                         <img src="public/icons/shop.svg" alt="" class="btn-icon">
@@ -39,17 +57,17 @@
         </nav>
     </header>
 
-    <!-- MAIN: Contenido principal de la página -->
+    <!-- MAIN: Contenido principal de la p├ígina -->
     <main>
         
-        <!-- SECCIÓN HERO: Presentación principal del producto -->
+        <!-- SECCI├ôN HERO: Presentaci├│n principal del producto -->
         <section id="home" class="hero-section">
             <div class="hero-container">
-                <!-- Título principal de la página (solo un h1) -->
+                <!-- T├¡tulo principal de la p├ígina (solo un h1) -->
                 <h1 class="hero-title">NexPhone X1</h1>
                 
-                <!-- Subtítulo descriptivo -->
-                <p class="hero-subtitle">El futuro en tus manos. Potencia ilimitada, diseño perfecto.</p>
+                <!-- Subt├¡tulo descriptivo -->
+                <p class="hero-subtitle">El futuro en tus manos. Potencia ilimitada, dise├▒o perfecto.</p>
                 
                 <!-- Call to Action principal -->
                 <div class="hero-cta">
@@ -58,62 +76,62 @@
                 
                 <!-- Imagen hero del producto -->
                 <div class="hero-image">
-                    <img src="assets/images/nexphone-hero.jpg" alt="NexPhone X1 mostrando su elegante diseño frontal con pantalla edge-to-edge">
+                    <img src="assets/images/nexphone-hero.jpg" alt="NexPhone X1 mostrando su elegante dise├▒o frontal con pantalla edge-to-edge">
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN BENEFICIOS: Principales ventajas del producto -->
+        <!-- SECCI├ôN BENEFICIOS: Principales ventajas del producto -->
         <section id="benefits" class="benefits-section">
             <div class="benefits-container">
-                <!-- Título de la sección -->
-                <h2 class="section-title">¿Por qué elegir NexPhone X1?</h2>
+                <!-- T├¡tulo de la secci├│n -->
+                <h2 class="section-title fade-in">┬┐Por qu├® elegir NexPhone X1?</h2>
                 
                 <!-- Grid de beneficios -->
                 <div class="benefits-grid">
                     
                     <!-- Beneficio 1: Rendimiento -->
-                    <article class="benefit-card">
+                    <article class="benefit-card slide-up">
                         <div class="benefit-icon">
-                            <img src="assets/images/icon-performance.svg" alt="Ícono de rendimiento representado por un rayo">
+                            <img src="assets/images/icon-performance.svg" alt="├ìcono de rendimiento representado por un rayo">
                         </div>
                         <h3 class="benefit-title">Rendimiento extremo</h3>
                         <p class="benefit-description">
-                            Procesador de última generación que hace todo más rápido. 
-                            Multitarea sin límites y gaming de alto nivel.
+                            Procesador de ├║ltima generaci├│n que hace todo m├ís r├ípido. 
+                            Multitarea sin l├¡mites y gaming de alto nivel.
                         </p>
                     </article>
                     
-                    <!-- Beneficio 2: Batería -->
-                    <article class="benefit-card">
+                    <!-- Beneficio 2: Bater├¡a -->
+                    <article class="benefit-card slide-up">
                         <div class="benefit-icon">
-                            <img src="assets/images/icon-battery.svg" alt="Ícono de batería con indicador de carga completa">
+                            <img src="assets/images/icon-battery.svg" alt="├ìcono de bater├¡a con indicador de carga completa">
                         </div>
-                        <h3 class="benefit-title">Batería todo el día</h3>
+                        <h3 class="benefit-title">Bater├¡a todo el d├¡a</h3>
                         <p class="benefit-description">
-                            Hasta 48 horas de uso continuo. Carga rápida que te da 
-                            50% de batería en solo 20 minutos.
+                            Hasta 48 horas de uso continuo. Carga r├ípida que te da 
+                            50% de bater├¡a en solo 20 minutos.
                         </p>
                     </article>
                     
-                    <!-- Beneficio 3: Cámara -->
-                    <article class="benefit-card">
+                    <!-- Beneficio 3: C├ímara -->
+                    <article class="benefit-card slide-up">
                         <div class="benefit-icon">
-                            <img src="assets/images/icon-camera.svg" alt="Ícono de cámara profesional">
+                            <img src="assets/images/icon-camera.svg" alt="├ìcono de c├ímara profesional">
                         </div>
-                        <h3 class="benefit-title">Cámara profesional</h3>
+                        <h3 class="benefit-title">C├ímara profesional</h3>
                         <p class="benefit-description">
-                            Sistema de triple cámara con IA. Fotos increíbles de día 
+                            Sistema de triple c├ímara con IA. Fotos incre├¡bles de d├¡a 
                             y de noche, modo retrato perfecto.
                         </p>
                     </article>
                     
-                    <!-- Beneficio 4: Diseño -->
-                    <article class="benefit-card">
+                    <!-- Beneficio 4: Dise├▒o -->
+                    <article class="benefit-card slide-up">
                         <div class="benefit-icon">
-                            <img src="assets/images/icon-design.svg" alt="Ícono de diseño minimalista">
+                            <img src="assets/images/icon-design.svg" alt="├ìcono de dise├▒o minimalista">
                         </div>
-                        <h3 class="benefit-title">Diseño premium</h3>
+                        <h3 class="benefit-title">Dise├▒o premium</h3>
                         <p class="benefit-description">
                             Acabado en aluminio aeroespacial y cristal reforzado. 
                             Elegante, resistente y ligero.
@@ -124,75 +142,75 @@
             </div>
         </section>
 
-        <!-- SECCIÓN CARACTERÍSTICAS: Especificaciones técnicas del producto -->
+        <!-- SECCI├ôN CARACTER├ìSTICAS: Especificaciones t├®cnicas del producto -->
         <section id="features" class="features-section">
             <div class="features-container">
-                <!-- Título de la sección -->
-                <h2 class="section-title">Especificaciones técnicas</h2>
+                <!-- T├¡tulo de la secci├│n -->
+                <h2 class="section-title fade-in">Especificaciones t├®cnicas</h2>
                 
-                <!-- Subtítulo descriptivo -->
-                <p class="section-subtitle">Tecnología de vanguardia en cada detalle</p>
+                <!-- Subt├¡tulo descriptivo -->
+                <p class="section-subtitle fade-in">Tecnolog├¡a de vanguardia en cada detalle</p>
                 
-                <!-- Grid de características técnicas -->
+                <!-- Grid de caracter├¡sticas t├®cnicas -->
                 <div class="features-grid">
                     
-                    <!-- Característica: Pantalla -->
-                    <div class="feature-item">
+                    <!-- Caracter├¡stica: Pantalla -->
+                    <div class="feature-item scale-in">
                         <div class="feature-image">
                             <img src="assets/images/feature-display.jpg" alt="Pantalla OLED del NexPhone X1 mostrando colores vibrantes">
                         </div>
                         <div class="feature-content">
                             <h3 class="feature-title">Pantalla OLED 6.7"</h3>
                             <p class="feature-description">
-                                Resolución 2K+ con tasa de refresco de 120Hz. Colores vibrantes 
+                                Resoluci├│n 2K+ con tasa de refresco de 120Hz. Colores vibrantes 
                                 y negros profundos. Brillo adaptativo hasta 2000 nits.
                             </p>
                         </div>
                     </div>
                     
-                    <!-- Característica: Procesador -->
-                    <div class="feature-item">
+                    <!-- Caracter├¡stica: Procesador -->
+                    <div class="feature-item scale-in">
                         <div class="feature-image">
                             <img src="assets/images/feature-processor.jpg" alt="Chip procesador NexCore X1 de alto rendimiento">
                         </div>
                         <div class="feature-content">
                             <h3 class="feature-title">Procesador NexCore X1</h3>
                             <p class="feature-description">
-                                8 núcleos de última generación con arquitectura de 3nm. 
-                                40% más rápido que la generación anterior.
+                                8 n├║cleos de ├║ltima generaci├│n con arquitectura de 3nm. 
+                                40% m├ís r├ípido que la generaci├│n anterior.
                             </p>
                         </div>
                     </div>
                     
-                    <!-- Característica: Cámara -->
-                    <div class="feature-item">
+                    <!-- Caracter├¡stica: C├ímara -->
+                    <div class="feature-item scale-in">
                         <div class="feature-image">
-                            <img src="assets/images/feature-camera.jpg" alt="Sistema de triple cámara del NexPhone X1">
+                            <img src="assets/images/feature-camera.jpg" alt="Sistema de triple c├ímara del NexPhone X1">
                         </div>
                         <div class="feature-content">
-                            <h3 class="feature-title">Triple cámara 108MP</h3>
+                            <h3 class="feature-title">Triple c├ímara 108MP</h3>
                             <p class="feature-description">
                                 Principal 108MP + Ultra gran angular 48MP + Teleobjetivo 12MP. 
-                                Zoom óptico 5x, estabilización avanzada y modo nocturno IA.
+                                Zoom ├│ptico 5x, estabilizaci├│n avanzada y modo nocturno IA.
                             </p>
                         </div>
                     </div>
                     
-                    <!-- Característica: Batería -->
+                    <!-- Caracter├¡stica: Bater├¡a -->
                     <div class="feature-item">
                         <div class="feature-image">
-                            <img src="assets/images/feature-battery.jpg" alt="Batería de larga duración del NexPhone X1">
+                            <img src="assets/images/feature-battery.jpg" alt="Bater├¡a de larga duraci├│n del NexPhone X1">
                         </div>
                         <div class="feature-content">
-                            <h3 class="feature-title">Batería 5000mAh</h3>
+                            <h3 class="feature-title">Bater├¡a 5000mAh</h3>
                             <p class="feature-description">
-                                Carga rápida 65W y carga inalámbrica 30W. Optimización 
-                                inteligente para máxima duración.
+                                Carga r├ípida 65W y carga inal├ímbrica 30W. Optimizaci├│n 
+                                inteligente para m├íxima duraci├│n.
                             </p>
                         </div>
                     </div>
                     
-                    <!-- Característica: Almacenamiento -->
+                    <!-- Caracter├¡stica: Almacenamiento -->
                     <div class="feature-item">
                         <div class="feature-image">
                             <img src="assets/images/feature-storage.jpg" alt="Opciones de almacenamiento del NexPhone X1">
@@ -201,12 +219,12 @@
                             <h3 class="feature-title">Hasta 512GB de almacenamiento</h3>
                             <p class="feature-description">
                                 Memoria RAM de 12GB para multitarea fluida. Almacenamiento 
-                                UFS 4.0 ultrarrápido.
+                                UFS 4.0 ultrarr├ípido.
                             </p>
                         </div>
                     </div>
                     
-                    <!-- Característica: Conectividad -->
+                    <!-- Caracter├¡stica: Conectividad -->
                     <div class="feature-item">
                         <div class="feature-image">
                             <img src="assets/images/feature-connectivity.jpg" alt="Conectividad 5G del NexPhone X1">
@@ -214,8 +232,8 @@
                         <div class="feature-content">
                             <h3 class="feature-title">Conectividad 5G</h3>
                             <p class="feature-description">
-                                5G ultrarrápido, WiFi 6E, Bluetooth 5.3 y NFC. 
-                                Siempre conectado a la máxima velocidad.
+                                5G ultrarr├ípido, WiFi 6E, Bluetooth 5.3 y NFC. 
+                                Siempre conectado a la m├íxima velocidad.
                             </p>
                         </div>
                     </div>
@@ -224,66 +242,66 @@
             </div>
         </section>
 
-        <!-- SECCIÓN TESTIMONIOS: Opiniones de usuarios -->
+        <!-- SECCI├ôN TESTIMONIOS: Opiniones de usuarios -->
         <section id="testimonials" class="testimonials-section">
             <div class="testimonials-container">
-                <!-- Título de la sección -->
-                <h2 class="section-title">Lo que dicen nuestros usuarios</h2>
+                <!-- T├¡tulo de la secci├│n -->
+                <h2 class="section-title fade-in">Lo que dicen nuestros usuarios</h2>
                 
                 <!-- Grid de testimonios -->
                 <div class="testimonials-grid">
                     
                     <!-- Testimonio 1 -->
-                    <article class="testimonial-card">
+                    <article class="testimonial-card slide-in-left">
                         <div class="testimonial-avatar">
-                            <img src="assets/images/user-maria.jpg" alt="Foto de perfil de María González">
+                            <img src="assets/images/user-maria.jpg" alt="Foto de perfil de Mar├¡a Gonz├ílez">
                         </div>
                         <div class="testimonial-content">
                             <p class="testimonial-text">
-                                "El mejor smartphone que he tenido. La cámara es increíble 
-                                y la batería dura todo el día sin problemas. Totalmente recomendado."
+                                "El mejor smartphone que he tenido. La c├ímara es incre├¡ble 
+                                y la bater├¡a dura todo el d├¡a sin problemas. Totalmente recomendado."
                             </p>
-                            <h3 class="testimonial-author">María González</h3>
-                            <p class="testimonial-role">Fotógrafa profesional</p>
+                            <h3 class="testimonial-author">Mar├¡a Gonz├ílez</h3>
+                            <p class="testimonial-role">Fot├│grafa profesional</p>
                         </div>
                         <div class="testimonial-rating">
-                            <img src="assets/images/stars-5.svg" alt="Calificación de 5 estrellas">
+                            <img src="assets/images/stars-5.svg" alt="Calificaci├│n de 5 estrellas">
                         </div>
                     </article>
                     
                     <!-- Testimonio 2 -->
-                    <article class="testimonial-card">
+                    <article class="testimonial-card slide-up">
                         <div class="testimonial-avatar">
-                            <img src="assets/images/user-carlos.jpg" alt="Foto de perfil de Carlos Ramírez">
+                            <img src="assets/images/user-carlos.jpg" alt="Foto de perfil de Carlos Ram├¡rez">
                         </div>
                         <div class="testimonial-content">
                             <p class="testimonial-text">
-                                "Rendimiento brutal para gaming. Juego a títulos exigentes 
-                                y va perfectamente fluido. El diseño es elegante y premium."
+                                "Rendimiento brutal para gaming. Juego a t├¡tulos exigentes 
+                                y va perfectamente fluido. El dise├▒o es elegante y premium."
                             </p>
-                            <h3 class="testimonial-author">Carlos Ramírez</h3>
+                            <h3 class="testimonial-author">Carlos Ram├¡rez</h3>
                             <p class="testimonial-role">Gamer y streamer</p>
                         </div>
                         <div class="testimonial-rating">
-                            <img src="assets/images/stars-5.svg" alt="Calificación de 5 estrellas">
+                            <img src="assets/images/stars-5.svg" alt="Calificaci├│n de 5 estrellas">
                         </div>
                     </article>
                     
                     <!-- Testimonio 3 -->
-                    <article class="testimonial-card">
+                    <article class="testimonial-card slide-in-right">
                         <div class="testimonial-avatar">
-                            <img src="assets/images/user-laura.jpg" alt="Foto de perfil de Laura Martínez">
+                            <img src="assets/images/user-laura.jpg" alt="Foto de perfil de Laura Mart├¡nez">
                         </div>
                         <div class="testimonial-content">
                             <p class="testimonial-text">
-                                "Cambié de iPhone al NexPhone X1 y no me arrepiento. 
-                                La pantalla es espectacular y la carga rápida es un salvavidas."
+                                "Cambi├® de iPhone al NexPhone X1 y no me arrepiento. 
+                                La pantalla es espectacular y la carga r├ípida es un salvavidas."
                             </p>
-                            <h3 class="testimonial-author">Laura Martínez</h3>
-                            <p class="testimonial-role">Diseñadora UX/UI</p>
+                            <h3 class="testimonial-author">Laura Mart├¡nez</h3>
+                            <p class="testimonial-role">Dise├▒adora UX/UI</p>
                         </div>
                         <div class="testimonial-rating">
-                            <img src="assets/images/stars-5.svg" alt="Calificación de 5 estrellas">
+                            <img src="assets/images/stars-5.svg" alt="Calificaci├│n de 5 estrellas">
                         </div>
                     </article>
                     
@@ -291,14 +309,14 @@
             </div>
         </section>
 
-        <!-- SECCIÓN CONTACTO: Formulario de contacto -->
+        <!-- SECCI├ôN CONTACTO: Formulario de contacto -->
         <section id="contact" class="contact-section">
             <div class="contact-container">
-                <!-- Título de la sección -->
-                <h2 class="section-title">¿Tienes preguntas?</h2>
+                <!-- T├¡tulo de la secci├│n -->
+                <h2 class="section-title">┬┐Tienes preguntas?</h2>
                 
-                <!-- Subtítulo -->
-                <p class="section-subtitle">Contáctanos y te responderemos lo antes posible</p>
+                <!-- Subt├¡tulo -->
+                <p class="section-subtitle">Cont├íctanos y te responderemos lo antes posible</p>
                 
                 <!-- Formulario de contacto -->
                 <form class="contact-form" action="#" method="POST">
@@ -337,12 +355,12 @@
                             name="message" 
                             class="form-textarea" 
                             rows="5" 
-                            placeholder="Escribe tu mensaje aquí..."
+                            placeholder="Escribe tu mensaje aqu├¡..."
                             required
                         ></textarea>
                     </div>
                     
-                    <!-- Botón de envío -->
+                    <!-- Bot├│n de env├¡o -->
                     <div class="form-submit">
                         <button type="submit" class="btn-submit">Enviar mensaje</button>
                     </div>
@@ -353,36 +371,36 @@
 
     </main>
 
-    <!-- FOOTER: Pie de página con información adicional y redes sociales -->
+    <!-- FOOTER: Pie de p├ígina con informaci├│n adicional y redes sociales -->
     <footer class="main-footer">
         <div class="footer-container">
             
-            <!-- Información de la marca -->
+            <!-- Informaci├│n de la marca -->
             <div class="footer-brand">
                 <h3 class="footer-logo">NexPhone</h3>
                 <p class="footer-tagline">El futuro en tus manos
-                                        Tecnología de última generación diseñada para transformar tu vida. Conéctate, crea y vive sin límites.</p>
+                                        Tecnolog├¡a de ├║ltima generaci├│n dise├▒ada para transformar tu vida. Con├®ctate, crea y vive sin l├¡mites.</p>
             </div>
             
             <!-- Redes sociales -->
             <div class="footer-social">
-                <h4 class="footer-heading">Síguenos</h4>
+                <h4 class="footer-heading">S├¡guenos</h4>
                 <ul class="social-links">
                     <li class="social-item">
                         <a href="https://instagram.com/nexphone" class="social-link" target="_blank" rel="noopener noreferrer">
-                            <img src="public/icons/instagram.svg" alt="Síguenos en Instagram">
+                            <img src="public/icons/instagram.svg" alt="S├¡guenos en Instagram">
                             Instagram
                         </a>
                     </li>
                     <li class="social-item">
                         <a href="https://twitter.com/nexphone" class="social-link" target="_blank" rel="noopener noreferrer">
-                            <img src="public/icons/twitter.svg" alt="Síguenos en Twitter">
+                            <img src="public/icons/twitter.svg" alt="S├¡guenos en Twitter">
                             X
                         </a>
                     </li>
                     <li class="social-item">
                         <a href="https://youtube.com/nexphone" class="social-link" target="_blank" rel="noopener noreferrer">
-                            <img src="public/icons/youtube.svg" alt="Suscríbete a nuestro canal de YouTube">
+                            <img src="public/icons/youtube.svg" alt="Suscr├¡bete a nuestro canal de YouTube">
                             YouTube
                         </a>
                     </li>
