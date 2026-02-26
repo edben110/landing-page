@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario Avanzado</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="wrapper">
+
+    <section class="card">
+      <h1>Contacto</h1>
+
+      <form id="form">
+
+        <div class="field">
+          <input type="text" id="name" placeholder="Juan Manuel Cordoba FLorez">
+          <small class="error" id="nameError"></small>
+        </div>
+
+        <div class="field">
+          <input type="text" id="email" placeholder="juanmaflorez7@gmail.com">
+          <small class="error" id="emailError"></small>
+        </div>
+
+        <div class="field">
+          <textarea id="message" placeholder="Hola soy Juan Manuel Cordoba FLorez, estudiante de Ingeniería de Software."></textarea>
+          <small class="error" id="messageError"></small>
+        </div>
+
+        <button type="submit" id="btn" disabled>
+          <span class="btn-text">Enviar</span>
+          <span class="loader hidden"></span>
+        </button>
+
+        <p id="successMessage" class="success hidden">
+           Mensaje enviado correctamente
+        </p>
+
+      </form>
+    </section>
+
+    <section class="card cv">
+      <h2>Hoja de Vida</h2>
+
+      <div class="cv-item">
+        <strong>Nombre:</strong> Juan Manuel Cordoba FLorez
+      </div>
+
+      <div class="cv-item">
+        <strong>Formación:</strong> Estudiante de Ingeniería de Software
+      </div>
+
+      <div class="cv-item">
+        <strong>Correo:</strong> juanmaflorez7@gmail.com
+      </div>
+
+      <div class="cv-item">
+        <strong>Repositorios:</strong>
+        <a href="https://github.com/tuusuario" target="_blank">
+          github.com/tuusuario
+        </a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
